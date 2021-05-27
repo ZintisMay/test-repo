@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .showWhenBig,
+      .showWhenMedium,
+      .showWhenSmall {
+        display: none;
+      }
+      body {
+        background-color: lightblue;
+      }
+
+      @media screen and (min-width: 1001px) {
+        .showWhenBig {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 1000px) and (min-width: 601px) {
+        .showWhenMedium {
+          display: block;
+        }
+        body {
+          background-color: lightgreen;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .showWhenSmall {
+          display: block;
+        }
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Try resizing the window! Make it wide or narrow!</h1>
+    <p>(If you open the inspector you can more easily change screen widths)</p>
+    <h1 class="showWhenBig">blue!</h1>
+    <h1 class="showWhenMedium">green!</h1>
+    <h1 class="showWhenSmall">red!</h1>
+  </body>
+</html>

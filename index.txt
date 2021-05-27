@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        outline: 1px solid black;
+      }
+      .bigBox {
+        /* height: 500px; */
+        width: 50%;
+        background-color: lightblue;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      .littleBox {
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+      .special {
+        order: -3;
+        background-color: blue;
+        flex-grow: 4;
+      }
+      .special:hover {
+        animation: 1s bell ease-in-out;
+      }
+
+      @keyframes bell {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(45deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+        75% {
+          transform: rotate(-45deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigBox">
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox special"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+      <div class="littleBox"></div>
+    </div>
+  </body>
+</html>
